@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main ()
+{
+    int n;
+    cin>>n;
+    int binary_num,decimal_num=0,base=1,rem;
+    binary_num=n;
+
+    while(n>0)
+    {
+        rem=n%10;
+        decimal_num=decimal_num+rem*base;
+        //base=base*2;
+        n=n/10;
+        base=base*2;
+    }
+    cout<<" decimal no is "<<decimal_num;
+}
